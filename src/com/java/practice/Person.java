@@ -1,6 +1,7 @@
 package com.java.practice;
 
 // This is to understand the order of static methods
+// this is my final push on person
 public class Person {
 	{
 		personCount = 10;

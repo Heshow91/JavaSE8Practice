@@ -1,5 +1,6 @@
 package com.java.practice;
 
+// This is to understand the order of static methods
 public class Person {
 	{
 		personCount = 10;

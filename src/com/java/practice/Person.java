@@ -3,25 +3,34 @@ package com.java.practice;
 // This is to understand the order of static methods
 // this is my final push on person
 public class Person {
+	
 	{
 		personCount = 10;
+		System.out.println("non static something");
 	}
 	static {
+System.out.println(Person.personCount + "before initialization");
 		personCount = 20;
+		System.out.println(Person.personCount + "something");
 	}
 	private static int personCount = 1000;
 	{
+		
 		personCount = 30;
+		System.out.println("non static somthing else");
 	}
 	static {
+		System.out.println(Person.personCount + "after initialization");
 		personCount = 40;
+		System.out.println(Person.personCount + "something else");
 	}
-
+	
+// can initialize variables before using them 
 	public static void main(String[] args) {
 		
 		System.out.println(Person.personCount); // Line A
 
-		Person p = new Person();// Line B
+		Person p = new Person();// Line B reads the non static lines
 		
 		
 		System.out.println(Person.personCount);// Line C

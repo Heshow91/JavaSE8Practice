@@ -34,15 +34,25 @@ public class Car {
 		// this will assign to object
 		
 		this.color = color;
-		this.type = type + " " + this.type;
+		this.type = type;
 		System.out.println(getDescription());
 	}
 
 	public static void main(String[] args) {
+		Car car1, car2, car3;
+		car1 = new Car("red", "Sedan");
+		car2 = new Car("blue", "Station Wagon");
+		car3 = new Car("white", "Coupe");
+		
+		//System.out.println(car1.color);
+//		car1.getDescription();
+//		car2.getDescription();
+		System.out.println(car2.getDescription());
+		car3.customize("orange", "Batmobile");
 		Car myCar = new Car();
 		myCar.customize("blue", "convertabile");
 		Car hisCar = new Car();
-		hisCar.customize(null, null);
+		hisCar.customize("orange", "mustang");
 		Car theyreCar = new Car();
 		theyreCar.customize("red", "jeep");
 		Car herCar = new Car();

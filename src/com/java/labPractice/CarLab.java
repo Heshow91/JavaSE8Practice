@@ -1,6 +1,6 @@
 package com.java.labPractice;
 //STatic methods practice and blocks
-public class Car {
+public class CarLab {
 
 	String color;
 	String type;
@@ -32,7 +32,7 @@ public class Car {
 
 	}
 
-	Car() {
+	CarLab() {
 
 		carCount++;
 		serialNumber = carCount;
@@ -43,7 +43,7 @@ public class Car {
 		// be unique.
 	}
 
-	Car(String c, String t) {
+	CarLab(String c, String t) {
 		color = c;
 		type = t;
 		carCount++;
@@ -66,17 +66,18 @@ public class Car {
 	public static void main(String[] args) {
 		//Car.carCount= 1;
 		
-		Car mycar = new Car();
+		CarLab mycar = new CarLab();
 //
 		mycar.printDescription();
 //
-		Car.carCount = 1 ;
+		CarLab.carCount = 1 ;
 
-		Car car1, car2, car3;
-		car1 = new Car("red", "Sedan");
-		car2 = new Car("blue", "Station Wagon");
-		car3 = new Car("white", "Coupe");
-		System.out.println(Car.carCount);
+		CarLab car1, car2, car3;
+		car1 = new CarLab("red", "Sedan");
+		car2 = new CarLab("blue", "Station Wagon");
+		car3 = new CarLab("white", "Coupe");
+car1.drive();
+		System.out.println(CarLab.carCount);
 		//System.out.println(car1.color);
 		car1.printDescription();
 		car2.printDescription();

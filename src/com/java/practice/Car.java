@@ -18,6 +18,7 @@ public class Car {
 	}
 	
 	Car(String color, String type){
+		//when chaining constructors it needs to be in the first line
 		this();
 		this.color = color;
 		this.type = type;
@@ -25,7 +26,7 @@ public class Car {
 
 	// desc = this is a blue convertible Celica
 	String getDescription() {
-		String desc = "This is a " + color + " " + type;
+		String desc = "This is a " + this.color + " " + this.type;
 		return desc;
 	}
 

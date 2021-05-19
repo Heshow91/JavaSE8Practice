@@ -10,6 +10,7 @@ public class Order {
 	String customer;
 	String product;
 	int quantity;
+	
 	public static double taxRate = 0.05;
 
 	public static void setTaxRate(double newRate) {

@@ -21,14 +21,14 @@ public class Loops {
 //			x++;
 //
 //		} while (x <= 20);
-//
-//		// while
+
+		// while
 //		while (x <= 20) {
 //			if (x % 2 == 0) {
 //
 //				System.out.println(x);
 //			}
-//			x++;
+//			x++;// need to increment or else it will not end
 //		}
 	}
 

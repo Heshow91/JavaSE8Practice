@@ -4,7 +4,7 @@ public class Enumerations {
 
 	public static void main(String[] args) {
 
-		Days today = Days.FRIDAY;
+		Days today = Days.MONDAY;
 		Days theUsersDay = Days.valueOf("TUESDAY");
 		String response = "";
 
@@ -18,8 +18,10 @@ public class Enumerations {
 		default:
 			response = "Practice Java!";
 		}
-		System.out.println(response);
 		System.out.println(theUsersDay);
+		System.out.println(response);
+		System.out.println(today);
+		
 	}
 
 }

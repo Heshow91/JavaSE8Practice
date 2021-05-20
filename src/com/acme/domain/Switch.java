@@ -4,8 +4,8 @@ public class Switch {
 
 	public static void main(String[] args) {
 
-		int j = 0;
-		String str = null;
+		int j = 3;
+		String str;
 
 		switch (j) {
 		case 1:
@@ -35,13 +35,13 @@ public class Switch {
 			System.out.println("is A");
 			break;
 		default:
-			System.out.println("char=" + c);
+			System.out.println("char = " + c);
 			break;
 		}
 		System.out.println("****************");
 
 		String timeOfDay = "a.m";
-		
+
 		switch (timeOfDay) {
 		case "a.m":
 			System.out.println("good morning");
@@ -53,17 +53,17 @@ public class Switch {
 			System.out.println("good day");
 		}
 		System.out.println("******************");
-		
-		int i =3;
+
+		int i = 3;
 		String stri;
-		switch(i) {
+		switch (i) {
 		case 1:
 		case 3:
-			stri ="odd";
+			stri = "odd";
 			break;
 		case 2:
 		case 4:
-			stri ="even";
+			stri = "even";
 			break;
 		default:
 			stri = "out of range";
@@ -73,22 +73,23 @@ public class Switch {
 		System.out.println("******************");
 
 	}
-	
+
 	static public boolean isSleeping() {
 		System.out.println("isSleeping() ");
 		return false;
 	}
+
 	static public boolean isHome() {
 		System.out.println("isHome() ");
 		return true;
 	}
+
 	public static void boolA() {
 		if (isSleeping() || isHome()) {
 			System.out.println("BoolA: Shhh... Wayels Sleeping");
-		
+
 		}
-	
-	}
-	
+
 	}
 
+}

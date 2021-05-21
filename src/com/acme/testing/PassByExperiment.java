@@ -5,6 +5,7 @@ import com.acme.utils.MyDate;
 public class PassByExperiment {
 
 	public static void main(String[] args) {
+		
 		MyDate date = new MyDate(1,20,2008);
 		
 		System.out.println("Before passing an object" + " " +  date);

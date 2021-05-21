@@ -7,9 +7,10 @@ public class StringPractice {
 	public static void main(String[] args) {
 		String s = new String("Hello World    ");
 		String sub = s.substring(4, 10);
+		String sub1 = s.substring(0, 5);
 		String trimmed = s.trim();
 		String upper = s.toUpperCase();
-
+		System.out.println(sub1);
 		String greet = "Hey,";
 		String name = "Hisham";
 		String str1 = greet + " " + name;
@@ -33,37 +34,38 @@ public class StringPractice {
 
 		a = a + b + c;
 		c = "wow";
-		
+
 		System.out.println(a);
 		System.out.println(c);
 		System.out.println("************");
-		
+
 		// example using immutable Strings and concatenation
 		String message = "Hello," + " ";
 		message += name + ".";
 		message += " " + "Today is" + " ";
 		message += Calendar.getInstance().getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.US);
 		message += ".";
-		
+
 		System.out.println(message);
 		System.out.println("***********");
-		
-		//example using StringBuilder
+
+		// example using StringBuilder
 		StringBuilder sb = new StringBuilder();
 		sb.append("Hello," + " ");
 		sb.append(name + ".");
 		sb.append(" " + "Today is" + " ");
-		sb.append(Calendar.getInstance().getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.US));
+		sb.append(Calendar.getInstance().getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.US));
 		sb.append(".");
-		
-			System.out.println(sb);
-			System.out.println("***********");
-		
+		sb.append(" Oh man I forgot to buy milk.");
+
+		System.out.println(sb);
+		System.out.println("***********");
+
 		int employeeId = 2812;
 		int deptId = 98;
-		
+
 		System.out.println(employeeId + deptId);
-		System.out.println(employeeId + ";" + deptId);
+		System.out.println(employeeId + ":" + deptId);
 		System.out.println(employeeId + deptId + ":" + employeeId + deptId);
 	}
 }

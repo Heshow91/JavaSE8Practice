@@ -4,28 +4,58 @@ public class MyDate {
 
 	private byte day;
 	private byte month;
-	private int year;
-	
-	
+	private short year;
 
-	public byte getDay() {
+	// Constructors:
+	// 1. Same name as the class
+	// 2. No return type
+	// The no-args constructor
+	public MyDate() {
+		this(1, 1, 1900);
+	}
+
+	// Constructor that takes 3 arguments
+	public MyDate(int m, int d, int y) {
+		setDate(m, d, y);
+	}
+
+	// Methods
+	public String toString() {
+		return month + "/" + day + "/" + year;
+	}
+
+	public void setDate(int m, int d, int y) {
+		if (valid(d, m, y)) {
+			day = (byte) d;
+			year = (short) y;
+			month = (byte) m;
+		}
+	}
+
+	public static void leapYears() {
+		for (int i = 1752; i <= 2020; i = i + 4) {
+			if (((i % 4 == 0) && (i % 100 != 0)) || (i % 400 == 0))
+				System.out.println("The year " + i + " is a leap year");
+		}
+	}
+
+	public int getDay() {
 		return day;
 	}
 
 	public void setDay(int day) {
-		if (valid(day, this.getMonth(), this.year)) {
-			this.day = (byte)day; //cast used
+		if (valid(day, month, year)) {
+			this.day = (byte) day;
 		}
-		
 	}
 
-	public byte getMonth() {
+	public int getMonth() {
 		return month;
 	}
 
 	public void setMonth(int month) {
-		if (valid(this.getDay(),month, this.year)) {
-			this.month = (byte)month; //cast used
+		if (valid(day, month, year)) {
+			this.month = (byte) month;
 		}
 	}
 
@@ -34,57 +64,25 @@ public class MyDate {
 	}
 
 	public void setYear(int year) {
-		this.year = year;
-	}
-
-	public MyDate() {
-
-	}
-
-	public MyDate(int m, int d, int y) {
-		setDate(m, d, y);
-	}
-
-	public void setDate(int m, int d, int y) {
-		// TODO Auto-generated method stub
-		setDay((byte) d);
-		year = y;
-		setMonth((byte) m);
-	}
-
-	public String toString() {
-		return getMonth() + "/" + getDay() + "/" + year;
-	}
-
-	public static void leapYears() {
-		for (int i = 1752; i <= 2020; i = i + 4) {
-			if ((i % 100 != 0) || (i % 400 == 0))
-				System.out.println("The year " + i + " is a leap year");
+		if (valid(day, month, year)) {
+			this.year = (short) year;
 		}
 	}
+
 	private boolean valid(int day, int month, int year) {
-		boolean isValid = true;
-		if (day > 31 || day < 1 || month > 12 || month <1) {
-			isValid = false;
-		}else {
-			switch (month) {
-			case 4: case 6: case 9: case 11:
-				isValid = (day <= 30);
-				break;
-			case 2:
-				isValid = (day <= 28 || (day ==29 && year % 4 == 0));
-				
-			}
+		if (day > 31 || day < 1 || month > 12 || month < 1) {
+			System.out.println("Attempting to create a non-valid date " + month + "/" + day + "/" + year);
+			return false;
 		}
-	
-	return isValid;
-	}
-
-	public void setDay(byte day) {
-		this.day = day;
-	}
-
-	public void setMonth(byte month) {
-		this.month = month;
+		switch (month) {
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			return (day <= 30);
+		case 2:
+			return day <= 28 || (day == 29 && year % 4 == 0);
+		}
+		return true;
 	}
 }

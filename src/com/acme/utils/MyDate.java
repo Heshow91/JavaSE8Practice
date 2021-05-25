@@ -10,6 +10,14 @@ public class MyDate {
 	// 1. Same name as the class
 	// 2. No return type
 	// The no-args constructor
+	public boolean equals(Object o) {
+		boolean result = false;
+		if( o instanceof MyDate) {
+			MyDate temp = (MyDate) o;
+			result = (temp.day == day) && (temp.month == month) && (temp.year == year);
+		}
+		return result;
+	}
 	public MyDate() {
 		this(1, 1, 1900);
 	}

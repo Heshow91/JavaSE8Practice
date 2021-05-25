@@ -11,7 +11,7 @@ public class TestMyDate {
 
 		System.out.println(party.toString());
 		System.out.println(taxDue.toString());
-		System.out.println(taxDue.equals(taxDue));
+		System.out.println(taxDue.equals(party));
 
 		MyDate javaRelease = new MyDate(3, 18, 2014);
 		String s = "Java SE 8 was released on " + javaRelease + ".";

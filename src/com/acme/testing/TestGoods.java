@@ -20,10 +20,14 @@ public class TestGoods {
 		System.out.println(paint);
 		System.out.println(anvil);
 		
+		System.out.println("******************************");
+		
 		System.out.println("The weight of " + glue + " is " + glue.weight());
 		System.out.println("The weight of " + paint + " is " + paint.weight());
 		System.out.println("The weight of " + anvil + " is " + anvil.weight());
-
+		
+		System.out.println("******************************");
+		
 		Good x = glue;
 		System.out.println("Is " + x + " flammable?  " + x.isFlammable());
 		x = paint;

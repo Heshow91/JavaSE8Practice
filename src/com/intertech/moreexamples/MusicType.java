@@ -1,4 +1,4 @@
-package com.acme.domain;
+package com.intertech.moreexamples;
 
 public enum MusicType {
 	CLASSICAL(1), JAZZ(4), ROCK(6), METAL(11);

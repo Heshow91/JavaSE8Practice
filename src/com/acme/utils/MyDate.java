@@ -10,14 +10,24 @@ public class MyDate {
 	// 1. Same name as the class
 	// 2. No return type
 	// The no-args constructor
+//	public boolean equals(Object o) {
+//		boolean result = false;
+//		if( o instanceof MyDate) {
+//			MyDate temp = (MyDate) o;
+//			result = (temp.day == day) && (temp.month == month) && (temp.year == year);
+//		}
+//		return result;
+//	}
 	public boolean equals(Object o) {
-		boolean result = false;
-		if( o instanceof MyDate) {
-			MyDate temp = (MyDate) o;
-			result = (temp.day == day) && (temp.month == month) && (temp.year == year);
+		if (o instanceof MyDate) {
+			MyDate d = (MyDate) o;
+			if((d.day == day) && (d.month == month) && d.year == year){
+				return true;
+			}
 		}
-		return result;
+		return false;
 	}
+	
 	public MyDate() {
 		this(1, 1, 1900);
 	}

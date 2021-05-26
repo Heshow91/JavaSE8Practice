@@ -1,4 +1,4 @@
-package com.acme.domain;
+package com.intertech.moreexamples;
 
 import java.util.Calendar;
 import java.util.Locale;

@@ -16,13 +16,13 @@ public class TestMyDate {
 		MyDate javaRelease = new MyDate(3, 18, 2014);
 		String s = "Java SE 8 was released on " + javaRelease + ".";
 		System.out.println(s);
-		
+
 		if (party == taxDue) {
 			System.out.println("These references point to the same object.");
 		}
-		if(party.equals(taxDue)) {
+		if (party.equals(taxDue)) {
 			System.out.println("The dates have the same day, month and year");
-		}else {
+		} else {
 			System.out.println("The dates are different and they are not the same object");
 		}
 		System.out.println("********************");
@@ -46,6 +46,19 @@ public class TestMyDate {
 		System.out.println(str2);
 		System.out.println(str3);
 
+		System.out.println("*****************************");
+
 		MyDate.leapYears();
+
+		System.out.println("******************************");
+
+		MyDate newYear = new MyDate(1, 1, 2009);
+		MyDate fiscalStart = new MyDate(1, 1, 2009);
+
+		if (newYear.equals(fiscalStart)) {
+			System.out.println("These two dates are equal");
+		} else {
+			System.out.println("These two dates are not equal");
+		}
 	}
 }

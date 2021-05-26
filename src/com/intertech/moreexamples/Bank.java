@@ -1,4 +1,4 @@
-package com.acme.domain;
+package com.intertech.moreexamples;
 
 public class Bank {
 	public static void main(String[] args) {

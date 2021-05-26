@@ -1,4 +1,4 @@
-package com.intertech.jss.polymorphism;
+package com.intertech.polymorphism;
 
 public class Programmer extends Employee {
 	private int linesOfCode = 1000;

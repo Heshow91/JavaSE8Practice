@@ -1,4 +1,4 @@
-package com.intertech.jss.polymorphism;
+package com.intertech.polymorphism;
 
 public class PayService {
 	public void cutCheck(Employee e) {

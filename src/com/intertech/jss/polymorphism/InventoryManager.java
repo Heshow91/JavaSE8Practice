@@ -2,7 +2,7 @@ package com.intertech.jss.polymorphism;
 
 public class InventoryManager {
 
-	private Automobile featuredAuto;
+	private Automobile featuredAuto = new Car();
 
 	//FRAME
 	//AUTOMOBILE = auto = new Car();

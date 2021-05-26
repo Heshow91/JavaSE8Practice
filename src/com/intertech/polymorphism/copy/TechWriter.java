@@ -1,4 +1,4 @@
-package com.intertech.polymorphism;
+package com.intertech.polymorphism.copy;
 
 import com.intertech.interfacepractice.Employee;
 

@@ -1,4 +1,4 @@
-package com.intertech.polymorphism;
+package com.intertech.interfacepractice;
 
 public class Manager extends Employee {
 	private double salary = 75000.00;

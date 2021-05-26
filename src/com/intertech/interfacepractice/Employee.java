@@ -1,6 +1,8 @@
-package com.intertech.polymorphism;
+package com.intertech.interfacepractice;
 
-public class Employee extends Person {
+import com.intertech.polymorphism.Person;
+
+public abstract class Employee extends Person {
 	public double pay() {
 		return 0;
 	}

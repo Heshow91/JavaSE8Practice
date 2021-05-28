@@ -12,5 +12,6 @@ public class OverLoadingExample {
 
 	public static void main(String[] args) {
 		sayHello("Jay", 80);
+		sayHello("Hisham");
 	}
 }

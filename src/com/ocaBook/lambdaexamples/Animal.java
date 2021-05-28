@@ -1,4 +1,4 @@
-package com.ocaBook.LambdaExamples;
+package com.ocaBook.lambdaexamples;
 
 public class Animal {
 	

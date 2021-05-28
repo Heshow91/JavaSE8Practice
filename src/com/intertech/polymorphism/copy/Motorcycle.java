@@ -1,4 +1,4 @@
-package com.intertech.jss.polymorphism;
+package com.intertech.polymorphism.copy;
 
 public class Motorcycle extends Automobile {
 

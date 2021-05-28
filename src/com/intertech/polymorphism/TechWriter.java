@@ -1,4 +1,6 @@
-package com.intertech.jss.polymorphism;
+package com.intertech.polymorphism;
+
+import com.intertech.interfacepractice.Employee;
 
 public class TechWriter extends Employee {
 	private double rate = 20.00;

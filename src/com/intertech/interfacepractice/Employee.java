@@ -1,6 +1,8 @@
-package com.intertech.jss.polymorphism;
+package com.intertech.interfacepractice;
 
-public class Employee extends Person {
+import com.intertech.polymorphism.Person;
+
+public abstract class Employee extends Person implements Payable{
 	public double pay() {
 		return 0;
 	}
@@ -12,7 +14,7 @@ public class Employee extends Person {
 	}
 
 	public static void main(String[] args) {
-		Person p = new Employee();
-		System.out.println(p.getDescription());
+		//Person p = new Employee();
+		//System.out.println(p.getDescription());
 	}
 }

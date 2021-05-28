@@ -1,6 +1,6 @@
 package com.acme.domain;
 
-public class Good {
+public abstract class Good implements Product{
 
 	public enum UnitOfMeasureType {
 		LITER, GALLON, CUBIC_METER, CUBIC_FEET
@@ -22,15 +22,16 @@ public class Good {
 		this.flammable = flammable;
 		this.weightPerUofM = wgtPerUoM;
 	}
+
 	public String toString() {
 		return name + "-" + modelNumber;
 	}
-	public double volume() {
-		return 0.0;
-	}
+
+	public abstract double volume();
+
 	public double weight() {
 		return volume() * weightPerUofM;
-		
+
 	}
 
 	public String getName() {
@@ -80,9 +81,10 @@ public class Good {
 	public void setWeightPerUofM(double weightPerUofM) {
 		this.weightPerUofM = weightPerUofM;
 	}
+
 	public boolean canShipViaPostOffice() {
 		return true;
-		
+
 	}
 
 }

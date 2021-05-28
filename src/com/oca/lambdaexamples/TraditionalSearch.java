@@ -1,4 +1,4 @@
-package com.ocaBook.lambdaexamples;
+package com.oca.lambdaexamples;
 
 import java.util.ArrayList;
 import java.util.List;

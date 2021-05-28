@@ -4,16 +4,16 @@ public class InventoryManager {
 
 	private Automobile featuredAuto = new Car();
 
-	//FRAME
-	//AUTOMOBILE = auto = new Car();
+	// FRAME
+	// AUTOMOBILE = auto = new Car();
 	public void addFeaturedAuto(Automobile auto) {
-		
+
 		featuredAuto = auto;
 	}
 
 	public void addAutomobile(Automobile c) {
 		System.out.println("Adding Automobile # " + c.getVIN());
-		
+
 	}
 //	public void addAutomobile(Car c) {
 //		System.out.println("Adding Car # " + c.getVIN());

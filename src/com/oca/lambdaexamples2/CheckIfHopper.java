@@ -1,4 +1,4 @@
-package com.oca.lambdaexamples;
+package com.oca.lambdaexamples2;
 
 public class CheckIfHopper implements CheckTrait{
 	

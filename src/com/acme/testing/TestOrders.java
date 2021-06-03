@@ -21,6 +21,13 @@ public class TestOrders {
 		Solid s2 = new Solid("Acme Balloon", 1401, 15, UnitOfMeasureType.CUBIC_FEET, false, 10, 5, 5);
 		Order balloons = new Order(date2, 1000.00, "Bugs Bunny", s2,
 		125);
+		System.out.println("********This is where the Lambda Function*********");
+		//pass in a Lambda expression to setRushable which returns true if the orderAmount is over 1500.
+		Order.setRushable((orderDate, orderAmount) -> orderAmount >1500 );
+		//call isPriorityOrder() on the anvil and balloon and make sure they return “true,” and “false” respectively.
+		System.out.println("Anvil isPriorityOrder: " + anvil.isPriorityOrder());
+		System.out.println("Balloons isPriorityOrder: " + balloons.isPriorityOrder());
+		System.out.println("*******End of Lambda function************");
 		
 		balloons.setQuantity(-200);
 		System.out.println(anvil);

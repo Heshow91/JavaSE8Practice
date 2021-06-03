@@ -8,6 +8,25 @@ public class Order {
 	private String customer;
 	private Product product;
 	private int quantity;
+	private static Rushable rushable;
+	
+
+	public static Rushable getRushable() {
+		return rushable;
+	}
+
+	public static void setRushable(Rushable rushable) {
+		Order.rushable = rushable;
+	}
+	// delegates to Rushable Object
+	
+	public boolean isPriorityOrder() {
+		boolean priorityOrder = false;
+		if(rushable !=null) {
+			priorityOrder = rushable.isRushable(orderDate, orderAmount);
+		}
+		return priorityOrder;
+	}
 
 	public MyDate getOrderDate() {
 		return orderDate;

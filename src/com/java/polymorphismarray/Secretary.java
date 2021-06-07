@@ -1,4 +1,4 @@
-package com.java.polymorphism;
+package com.java.polymorphismarray;
 
 public class Secretary extends Employee {
 	public static void main(String[] args) {
@@ -18,11 +18,12 @@ public class Secretary extends Employee {
 		
 		//to access department need to cast Manager
 		((Manager)staff[2]).department = "MI6";
+		//((Manager)staff[0]).department = "Front House";
 		//((Manager)staff[0]).department = "Server";
 		
 		for (int j = 0; j < staff.length; j++) {
 			System.out.println(staff[j]);
-		}//for each
+		}//for each     variable : collection
 		for (Employee employee : staff) {
 			System.out.println(employee);
 		}

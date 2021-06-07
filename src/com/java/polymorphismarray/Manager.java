@@ -1,4 +1,4 @@
-package com.java.polymorphism;
+package com.java.polymorphismarray;
 
 public class Manager extends Employee {
 	public String department;

@@ -18,6 +18,25 @@ public class MyDate {
 //		}
 //		return result;
 //	}
+	private static MyDate[] holidays;
+	static {
+		holidays = new MyDate[6];
+		holidays[0] = new MyDate(1, 1, 2021);
+		holidays[1] = new MyDate(9, 5, 2021);
+		holidays[2] = new MyDate(5, 9, 2021);
+		holidays[3] = new MyDate(11, 24, 2021);
+		holidays[4] = new MyDate(5, 12, 2021);
+		holidays[5] = new MyDate(7, 19, 2021);
+		
+	}
+	
+	public static void listHolidays() {
+		System.out.println("The Holidays are:");
+		for(int i = 0; i < holidays.length; i++) {
+			System.out.println(holidays[i]);
+		}
+	}
+	
 	public boolean equals(Object o) {
 		if (o instanceof MyDate) {
 			MyDate d = (MyDate) o;
@@ -102,5 +121,13 @@ public class MyDate {
 			return day <= 28 || (day == 29 && year % 4 == 0);
 		}
 		return true;
+	}
+
+	public static MyDate[] getHolidays() {
+		return holidays;
+	}
+
+	public static void setHolidays(MyDate[] holidays) {
+		MyDate.holidays = holidays;
 	}
 }

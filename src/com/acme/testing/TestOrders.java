@@ -50,5 +50,9 @@ public class TestOrders {
 		Service s3 = new Service("Road Runner Eradication", 14, false);
 		Order birdEradication = new Order(date3, 20000, "Daffy Duck ",s3, 1);
 		System.out.println("The total bill for: " + birdEradication + "is "+ birdEradication.computeTotal());
+		System.out.println("*************************************************");
+		
+		MyDate date5 = new MyDate(1,1,2021);
+		System.out.println(date5);
 	}
 }

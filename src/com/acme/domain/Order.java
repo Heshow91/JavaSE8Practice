@@ -9,7 +9,6 @@ public class Order {
 	private Product product;
 	private int quantity;
 	private static Rushable rushable;
-	
 
 	public static Rushable getRushable() {
 		return rushable;
@@ -19,10 +18,10 @@ public class Order {
 		Order.rushable = rushable;
 	}
 	// delegates to Rushable Object
-	
+
 	public boolean isPriorityOrder() {
 		boolean priorityOrder = false;
-		if(rushable !=null) {
+		if (rushable != null) {
 			priorityOrder = rushable.isRushable(orderDate, orderAmount);
 		}
 		return priorityOrder;
@@ -33,7 +32,12 @@ public class Order {
 	}
 
 	public void setOrderDate(MyDate orderDate) {
-		this.orderDate = orderDate;
+		if (isHoliday(orderDate)) {
+			System.out.println("Order date, " + orderDate + ", cannot be set to a holiday!");
+		} else {
+
+			this.orderDate = orderDate;
+		}
 	}
 
 	public double getOrderAmount() {
@@ -91,6 +95,7 @@ public class Order {
 	}
 
 	public Order(MyDate d, double amt, String c, Product p, int q) {
+		setOrderDate(d);
 		orderDate = d;
 		orderAmount = amt;
 		customer = c;
@@ -135,5 +140,16 @@ public class Order {
 			total = total + computeTax();
 		}
 		return total;
+	}
+
+	private boolean isHoliday(MyDate proposedDate) {
+		boolean result = false;
+		for (MyDate holiday : MyDate.getHolidays()) {
+			if (holiday.equals(proposedDate)) {
+				result = true;
+			}
+		}
+		return result;
+
 	}
 }

@@ -60,5 +60,8 @@ public class TestMyDate {
 		} else {
 			System.out.println("These two dates are not equal");
 		}
+		
+		System.out.println("************************************");
+		MyDate.listHolidays();
 	}
 }

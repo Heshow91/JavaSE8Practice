@@ -6,19 +6,20 @@ public class MyDate implements Comparable<Object>{
 	private byte month;
 	private short year;
 
-	@Override
-	public int compareTo(Object o) {
+	public int compareTo(Object o1, Object o2) {
 		// TODO Auto-generated method stub
-		MyDate d = (MyDate) o;
-		if( year != d.year) {
+		//comparing in acending order
+		MyDate d1 = (MyDate) o1;
+		MyDate d2 = (MyDate) o2;
+		if( d1.year != d2.year) {
 			
-			return year - d.year;
+			return d1.year - d2.year;
 		}
-		if(month != d.month) {
-			return month - d.month;
+		if(d1.month != d2.month) {
+			return d1.month - d2.month;
 		}
-		if(day != d.day) {
-			return day - d.day;
+		if(d1.day != d2.day) {
+			return d1.day - d2.day;
 		}
 		//same equal
 		return 0;
@@ -146,6 +147,12 @@ public class MyDate implements Comparable<Object>{
 
 	public static void setHolidays(MyDate[] holidays) {
 		MyDate.holidays = holidays;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	

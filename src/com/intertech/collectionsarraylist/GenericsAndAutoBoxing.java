@@ -20,6 +20,8 @@ public class GenericsAndAutoBoxing {
 		
 		System.out.println("************************");
 		//new way with parameter type no need for casting
+		//Generic's allow to specify the intended data type to be stored in a reference,
+		//in this case into the collection.
 		List<Integer> primes = new ArrayList<Integer>();
 		primes.add(Integer.valueOf(1));
 		primes.add(Integer.valueOf(2));

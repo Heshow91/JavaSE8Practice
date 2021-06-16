@@ -1,6 +1,5 @@
 package com.intertech.collectionsarraylist;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,7 +16,10 @@ public class UsingAsList {
 		System.out.println(dates);
 		
 //		Since a method that declares a VarArg parameter may also accept an array argument, the following is also legal:
-		MyDate[] datesArray = { new MyDate(2,1,2020), new MyDate(3,10,1980) };
+		MyDate[] datesArray = { 
+				new MyDate(2,1,2020), 
+				new MyDate(3,10,1980),
+				new MyDate(10,01,1991)};
 		List<MyDate> dates1 = Arrays.asList(datesArray);
 		System.out.println(dates1);
 		
@@ -27,7 +29,12 @@ public class UsingAsList {
 //			    { new MyDate(2,1,2020), new MyDate(3,10,1980) } ); // ILLEGAL
 		
 //		However, there is a similar syntax, known as an anonymous array, 
-//		which does work... (note the new MyDate[] in front of the initialization syntax)		\
+//		which does work... (note the new MyDate[] in front of the initialization syntax)	
+		List<MyDate> dates2 = Arrays.asList( 
+			    new MyDate[]{ new MyDate(2,1,2020), 
+			    				new MyDate(3,10,1980),
+			    					new MyDate(10,01,1991)}); // LEGAL
+				System.out.println(dates2);
 		
 //		Also as a note for the exam, remember that asList is a method in the Arrays class.  
 //		It's not found in the Collections class, nor is it found as a method in the list itself... 

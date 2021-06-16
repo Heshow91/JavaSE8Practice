@@ -2,6 +2,10 @@ package com.intertech.collectionsarraylist;
 
 public class WrapperAndOverLoading {
 
+		// Method 0
+	  public void pickMe(Long x) { //will not be called
+		  System.out.println("You Suck");
+	  }
 	    // Method A
 	    public void pickMe(int x) {
 	        System.out.println ("int");
@@ -13,7 +17,6 @@ public class WrapperAndOverLoading {
 	    }
 	 
 	    // Method C
-	    //public void pickMe(Long x) { will not be called
 	    public void pickMe(Integer x) {
 	        System.out.println ("Integer");
 	    }

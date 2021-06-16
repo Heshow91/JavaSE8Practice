@@ -2,7 +2,7 @@ package com.intertech.collectionssetsexamples;
 
 import java.util.HashSet;
 
-public class HashSetting {
+public class HashSetExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

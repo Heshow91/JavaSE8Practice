@@ -7,4 +7,7 @@ public class Cat implements Drawable {
 		// TODO Auto-generated method stub
 		System.out.println("*..*");
 	}
+	private class Dog extends Cat{
+		
+	}
 }

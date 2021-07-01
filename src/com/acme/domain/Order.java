@@ -1,5 +1,6 @@
 package com.acme.domain;
 
+import com.acme.utils.HolidayOrderNotAllowedException;
 import com.acme.utils.MyDate;
 
 public class Order {
@@ -31,9 +32,10 @@ public class Order {
 		return orderDate;
 	}
 
-	public void setOrderDate(MyDate orderDate) {
+	public void setOrderDate(MyDate orderDate) throws HolidayOrderNotAllowedException{
 		if (isHoliday(orderDate)) {
 			System.out.println("Order date, " + orderDate + ", cannot be set to a holiday!");
+			throw new HolidayOrderNotAllowedException(orderDate);
 		} else {
 
 			this.orderDate = orderDate;
@@ -95,7 +97,13 @@ public class Order {
 	}
 
 	public Order(MyDate d, double amt, String c, Product p, int q) {
-		setOrderDate(d);
+		try {
+			setOrderDate(d);
+		} catch (HolidayOrderNotAllowedException e) {
+			System.out.println("The order date for an order cannot be a holiday! Application closing.");
+			// TODO Auto-generated catch block
+			System.exit(0);
+		}
 		orderDate = d;
 		orderAmount = amt;
 		customer = c;
@@ -149,7 +157,7 @@ public class Order {
 				result = true;
 			}
 		}
-		return result;
+		return false;
 
 	}
 }

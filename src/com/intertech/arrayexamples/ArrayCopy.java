@@ -5,12 +5,12 @@ public class ArrayCopy {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int[] array = {1,2,3,4,5,6,7,8};
-		int[] temp = array;
-		array = new int[9];
+		int[] array = {};
+		//int[] temp = array;
+		//array = new int[9];
 	//temp = array copying from, 0 = index starting at, array = what array copying too, 0 = starting from , temp.length how long
-		System.arraycopy(temp, 0, array, 0, temp.length);
-		
+		//System.arraycopy(temp, 0, array, 0, temp.length);
+		System.out.println(array.length);
 	}
 
 }

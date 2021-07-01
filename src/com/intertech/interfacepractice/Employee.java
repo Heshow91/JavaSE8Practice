@@ -17,4 +17,5 @@ public abstract class Employee extends Person implements Payable{
 		//Person p = new Employee();
 		//System.out.println(p.getDescription());
 	}
+	
 }

@@ -13,7 +13,7 @@ System.out.println(Person.personCount + "before initialization");
 		personCount = 20;
 		System.out.println(Person.personCount + "something");
 	}
-	private static int personCount = 1000;
+	static int personCount = 1000;
 	{
 		
 		personCount = 30;

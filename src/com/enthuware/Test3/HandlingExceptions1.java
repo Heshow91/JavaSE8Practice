@@ -17,7 +17,7 @@ class Base {
 public class HandlingExceptions1 extends Base {
 	void method1() {
 		someMethod("args");
-		System.out.println(someMethod("args"));
+		System.out.println(someMethod("pew pew pew poo poo pewww"));
 	}
 
 	public static void main(String[] args) {

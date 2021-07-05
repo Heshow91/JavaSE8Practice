@@ -12,11 +12,12 @@ public class ArraysExample {
 		int e = w++;
 		int r = ++w;
 		int t = w++;
-		int 
-	ArraysExample ax = new ArraysExample();
-	int cardNo = 12345;
-	ax.checkCard(cardNo);
-	ax.readCard(cardNo);
+	
+		ArraysExample ax = new ArraysExample();
+		int cardNo = 12345;
+		ax.checkCard(cardNo);
+		ax.readCard(cardNo);
+		
 		// TODO Auto-generated method stub
 		int num = 5;
 		// will always do the do portion first then check condition

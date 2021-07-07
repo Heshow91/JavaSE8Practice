@@ -17,6 +17,8 @@ public class UsingSwitchStatement {
 			System.out.println("2.1");
 			break;
 		case 7:
+			System.out.println("this one");
+			break;
 		case 8:
 		case 9:
 			System.out.println("1st");
